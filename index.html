@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  /* max-height: 300px; only for demonstration, should be removed */
+  /*overflow: auto;*/
+  height:auto;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<header><h1>My Website</h1></header>
+<nav>
+  <ul>
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#About">About</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ul>
+</nav>
+<section> 
+<article>
+    <h2>Saketh </h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan justo sit amet vestibulum ultrices. Vivamus ac nibh accumsan lectus tempor rutrum ut eu odio. Vestibulum aliquam pellentesque sagittis. Maecenas non sem ut purus ultrices imperdiet id id nisi. Quisque faucibus justo non rhoncus fermentum. Nullam mattis ipsum sed varius consequat. Suspendisse id commodo odio. Aliquam lacinia dui dui, at consequat tortor bibendum ut. Phasellus nulla dolor, egestas finibus porta sit amet, suscipit nec risus.</p>
+
+<p>Maecenas efficitur tempor imperdiet. Etiam consectetur viverra orci, quis posuere libero bibendum eget. Proin sed egestas orci, in laoreet augue. Nunc feugiat ipsum ut libero efficitur, sed porttitor lorem commodo. Nam efficitur efficitur lectus, sed suscipit lectus aliquam ac. Nunc sem nisl, iaculis ut magna blandit, luctus consequat arcu. Fusce posuere, mauris quis commodo malesuada, risus urna maximus urna, sed aliquet quam metus id nisi. Suspendisse arcu sem, blandit quis blandit non, pulvinar et dolor. Praesent id molestie tortor, in convallis nibh.</p>
+  
+  </article>
+</section>
+<footer>
+<p> Copyright 2026 </p>
+</footer>
+
+</body>
+</html>
