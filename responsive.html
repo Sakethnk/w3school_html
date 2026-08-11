@@ -82,11 +82,11 @@
 
 
     <div id="header-placeholder"></div>
-    <script> fetch('/includes/header.html').then(response => response.text()).then(data => { document.getElementById('header-placeholder').innerHTML = data; }); 
+    <script> fetch('./includes/header.html').then(response => response.text()).then(data => { document.getElementById('header-placeholder').innerHTML = data; }); 
     </script>
 
     <div id="nav-placeholder"></div>
-    <script> fetch('/includes/nav.html').then(response => response.text()).then(data => { document.getElementById('nav-placeholder').innerHTML = data; }); 
+    <script> fetch('./includes/nav.html').then(response => response.text()).then(data => { document.getElementById('nav-placeholder').innerHTML = data; }); 
     </script>
     <div id="home-placeholder">
         <article>
@@ -113,7 +113,7 @@
 
     <div id="footer-placeholder"></div>
     <script>
-        fetch('/includes/footer.html').then(response => response.text()).then(data => {
+        fetch('./includes/footer.html').then(response => response.text()).then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         }); 
     </script>
