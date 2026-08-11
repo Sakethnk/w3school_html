@@ -10,6 +10,7 @@ GitHub reference commands
 - git checkout main = to travel from local to main
 - git merge local = it merges all local files in main branch
 - git push origin = this is a command which pushes local live to github live 
+- git pull origin = this is the command to bring all the code from other team members "get latest"
 
 10-Aug-2026 
 
