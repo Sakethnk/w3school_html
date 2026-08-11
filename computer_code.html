@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+</head>
+
+
+<body>
+
+
+    <div id="header-placeholder"></div>
+    <script> fetch('./includes/header.html').then(response => response.text()).then(data => { document.getElementById('header-placeholder').innerHTML = data; }); 
+    </script>
+
+    <div id="nav-placeholder"></div>
+    <script> fetch('./includes/nav.html').then(response => response.text()).then(data => { document.getElementById('nav-placeholder').innerHTML = data; }); 
+    </script>
+    <div id="home-placeholder">
+        <iframe src="./includes/iframe_cc.html" width="50%" height="600px" style="border:none;"></iframe>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('./includes/footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        }); 
+    </script>
+
+</body>
+
+</html>
