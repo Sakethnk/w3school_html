@@ -12,19 +12,23 @@ body {
 
 /* Style the header */
 header {
-  background-color: #666;
-  padding: 30px;
+  background-color: #000000;
+  padding: 10px;
   text-align: center;
   font-size: 35px;
   color: white;
 }
-
+a {
+  color: white;
+  text-decoration: none;
+}
 /* Create two columns/boxes that floats next to each other */
 nav {
+  color: white;
   float: left;
   width: 30%;
   height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
+  background: #000000;
   padding: 20px;
 }
 
@@ -35,11 +39,12 @@ nav ul {
 }
 
 article {
+  color: white;
   float: left;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
-  height: auto; /* only for demonstration, should be removed */
+  background-color: #000000;
+  height: 300px; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -51,7 +56,7 @@ section::after {
 
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color: #000000;
   padding: 10px;
   text-align: center;
   color: white;

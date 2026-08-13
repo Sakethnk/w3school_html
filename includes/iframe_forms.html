@@ -18,5 +18,132 @@
   <label for="vehicle3"> I have a boat</label><br><br>
 
   <input type="submit" value="Submit"><br><br>
-
+<h2>Form Attributes</h2>
+<p>The <b>action attribute</b> defines the action to be performed when the form is submitted.
+  Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+  In the example below, the form data is sent to a file called "action_page.php". This file contains a server-side
+  script that handles the form data:<br>
+  Tip: If the action attribute is omitted, the action is set to the current page.
+</p>
 </form> 
+<form action="/includes/actionpage.html">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="saketh"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="kudala"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<p>The <b>target attribute</b> specifies where to display the response that is received after submitting the form.</p>
+<table>
+    <tr>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>_blank</td>
+        <td>The response is displayed in a new window or tab</td>
+    </tr>
+
+    <tr>
+        <td>_self</td>
+        <td>The response is displayed in the current window</td>
+    </tr>
+
+    <tr>
+        <td>_parent</td>
+        <td>The response is displayed in the parent frame</td>
+    </tr>
+
+    <tr>
+        <td>_top</td>
+        <td>The response is displayed in the full body of the window</td>
+    </tr>
+
+    <tr>
+        <td><i>framename</i></td>
+        <td>The response is displayed in a named iframe</td>
+    </tr>
+</table>
+<p>When submitting this form, the result will be opened in a new browser tab:</p>
+
+<form action="/includes/actionpage.html" target="_blank">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+<p>The <b>method attribute</b> specifies the HTTP method to be used when submitting the form data.
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+The default HTTP method when submitting form data is GET. </p>
+<p>This form will be submitted using the GET method:</p>
+
+<form action="/includes/actionpage.html" target="_blank" method="get">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="saketh"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="kudala"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>After you submit, notice that the form values is visible in the address bar of the new browser tab.</p>
+<br>
+<p>This form will be submitted using the POST method:</p>
+
+<form action="/includes/actionpage.html" target="_blank" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="saketh"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="kudala"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>After you submit, notice that, unlike the GET method, the form values is NOT visible in the address bar of the new browser tab.</p>
+
+<h2>Form Elements</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form>
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+<p>You can preselect an option with the selected attribute:</p>
+
+<form>
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat" selected>Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+<p>Use the multiple attribute to allow the user to select more than one value.</p>
+<form>
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+<p>The textarea element defines a multi-line input field.</p>
+
+<form>
+  <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
